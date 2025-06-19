@@ -11,11 +11,12 @@ let posts = [
   { id: 3, title: 'Post Three', content: 'This is the content of post three.' }
 ];
 
+
 app.get('/', (req, res) => {
   res.send(posts);
 });
-app.get('/about', (req, res) => {
-  res.send('About Page');
+app.get('/posts', (req, res) => {
+  res.send(posts);
 });
 
 app.get('/posts/:id', (req, res) => {
